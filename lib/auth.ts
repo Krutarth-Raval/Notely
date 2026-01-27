@@ -56,5 +56,9 @@ export const auth = betterAuth({
         provider: "pg", // or "mysql", "sqlite"
         schema
     }),
-    plugins: [nextCookies()] 
+    plugins: [nextCookies()],
+    session: {
+        expiresIn: 60 * 60 * 24 * 7, // 7 days
+        updateAge: 60 * 60 * 24 // 1 day (optional, but good practice)
+    }
 });

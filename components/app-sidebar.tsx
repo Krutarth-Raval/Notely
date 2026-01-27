@@ -35,7 +35,7 @@ export async function AppSidebar({
   return (
     <Sidebar {...props}>
       <SidebarHeader>
-        <Link href="/" >
+        <Link href="/dashboard" >
         <div className="px-2 flex items-center select-none py-2">
 
          <Logo/>

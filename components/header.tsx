@@ -9,9 +9,12 @@ import { useScroll } from "motion/react";
 import { ModeSwitcher } from "./mode-switcher";
 
 
+import { authClient } from "@/lib/auth-client";
+
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  const { data: session } = authClient.useSession();
 
   const { scrollYProgress } = useScroll();
 
@@ -35,7 +38,7 @@ export const HeroHeader = () => {
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
               <Link
-                href="/"
+                href={session ? "/dashboard" : "/"}
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
@@ -78,6 +81,14 @@ export const HeroHeader = () => {
                             </div> */}
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <ModeSwitcher/>
+                {session ? (
+                   <Button asChild size="sm">
+                   <Link href="/dashboard">
+                     <span>Go to Dashboard</span>
+                   </Link>
+                 </Button>
+                ) : (
+                  <>
                 <Button asChild variant="outline" size="sm">
                   <Link href="/login">
                     <span>Login</span>
@@ -88,6 +99,8 @@ export const HeroHeader = () => {
                     <span>Sign Up</span>
                   </Link>
                 </Button>
+                  </>
+                )}
               </div>
             </div>
           </div>
