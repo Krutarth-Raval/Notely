@@ -17,6 +17,7 @@ export const auth = betterAuth({
         process.env.BASE_URL,
         "https://notly-six.vercel.app",
         "https://notly-krutarth-ravals-projects.vercel.app",
+        "http://localhost:3000"
     ].filter(Boolean) as string[],
     emailVerification: {
         sendVerificationEmail: async ({ user, url }, ) => {
