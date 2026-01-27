@@ -319,9 +319,9 @@ const RichTextEditor = ({ content, noteId, note }: RichTextEditorProps) => {
 
   return (
     <div className="flex justify-center w-auto">
-      <div className="max-w-[90svw] md:w-full bg-card text-card-foreground rounded-lg border">
+      <div className="w-full bg-card text-card-foreground rounded-lg border">
         {/* Toolbar */}
-        <div className="w-auto flex items-center max-md:overflow-x-scroll gap-1 p-2 bg-muted/50 border-b">
+        <div className="sticky top-0 z-50 flex items-center max-w-[90svw] md:w-full  overflow-x-auto gap-1 p-2 bg-card/80 backdrop-blur-md border-b-2 rounded-t-lg">
           {/* Undo/Redo */}
           <Button
             variant="ghost"

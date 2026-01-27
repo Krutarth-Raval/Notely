@@ -25,7 +25,7 @@ export const getNotebooks = async () => {
     try {
       session = await auth.api.getSession({ headers: rawHeaders });
     } catch (e) {
-      console.error("Auth session fetch failed:", e);
+      // console.error("Auth session fetch failed:", e);
       return { success: false, message: "Failed to fetch auth session" };
     }
 
@@ -45,7 +45,7 @@ export const getNotebooks = async () => {
       notebooks: notebookByUser,
     };
   } catch (error) {
-    console.error("getNotebooks error:", error);
+    // console.error("getNotebooks error:", error);
     return { success: false, message: "Failed to get notebooks" };
   }
 };
