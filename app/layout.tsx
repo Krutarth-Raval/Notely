@@ -29,23 +29,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4902451353277638"
+          crossOrigin="anonymous"></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NuqsAdapter >
 
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
           >
-          <Toaster/>
-          {children}
-          <Analytics />
-          <SpeedInsights/>
-        </ThemeProvider>
-          </NuqsAdapter >
+            <Toaster />
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </ThemeProvider>
+        </NuqsAdapter >
       </body>
     </html>
   );
