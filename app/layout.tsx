@@ -20,6 +20,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Notely",
   description: "Contain all your notes in one place",
+  other: {
+    "google-adsense-account": "ca-pub-4902451353277638",
+  },
 };
 
 export default function RootLayout({
