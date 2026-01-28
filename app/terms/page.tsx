@@ -31,7 +31,7 @@ export default function TermsOfService() {
                                 You agree to not use the Service to:
                             </p>
                             <ul className="list-disc pl-6 mt-2 space-y-1">
-                                <li>Upload, post, email, transmit or otherwise make available any content that is unlawful, harmful, threatening, abusive, harassing, tortuous, defamatory, vulgar, obscene, libelous, invasive of another's privacy, hateful, or racially, ethnically or otherwise objectionable.</li>
+                                <li>Upload, post, email, transmit or otherwise make available any content that is unlawful, harmful, threatening, abusive, harassing, tortuous, defamatory, vulgar, obscene, libelous, invasive of another&apos;s privacy, hateful, or racially, ethnically or otherwise objectionable.</li>
                                 <li>Harm minors in any way.</li>
                                 <li>Impersonate any person or entity.</li>
                             </ul>

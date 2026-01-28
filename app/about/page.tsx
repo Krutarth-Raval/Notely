@@ -2,7 +2,6 @@ import FooterSection from "@/components/footer";
 import { HeroHeader } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function About() {
     return (
@@ -14,7 +13,7 @@ export default function About() {
                         {/* Hero */}
                         <section className="text-center space-y-6">
                             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                                We're building the future of <span className="text-primary">note-taking</span>.
+                                We&apos;re building the future of <span className="text-primary">note-taking</span>.
                             </h1>
                             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                                 Notely is designed to be the fastest, most delightful way to capture your thoughts and organize your life.
