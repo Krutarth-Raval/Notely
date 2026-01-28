@@ -46,12 +46,10 @@ import {
   AlignRight,
   AlignJustify,
   Plus,
-  ChevronDown,
-  Superscript,
-  Subscript,
   Menu,
   X,
   CheckSquare,
+  type LucideIcon,
 } from "lucide-react";
 import { Underline as UnderlineIcon } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
@@ -60,6 +58,14 @@ interface RichTextEditorProps {
   content?: JSONContent;
   noteId?: string;
   note?: { title?: string; notebookId?: string };
+}
+
+interface ToolbarButtonProps {
+  onClick: () => void;
+  disabled: boolean | undefined;
+  isActive?: boolean;
+  icon: LucideIcon;
+  label: string;
 }
 
 const RichTextEditor = ({ content, noteId, note }: RichTextEditorProps) => {
@@ -351,7 +357,7 @@ const RichTextEditor = ({ content, noteId, note }: RichTextEditorProps) => {
     return "H1";
   };
 
-  const ToolbarButton = ({ onClick, disabled, isActive, icon: Icon, label }: any) => (
+  const ToolbarButton = ({ onClick, disabled, isActive, icon: Icon, label }: ToolbarButtonProps) => (
     <Tooltip>
       <TooltipTrigger asChild>
         <Button
@@ -514,6 +520,7 @@ const RichTextEditor = ({ content, noteId, note }: RichTextEditorProps) => {
               }
               editor?.chain().focus().extendMarkRange("link").setLink({ href: url }).run();
             }}
+            disabled={!editor}
             icon={Link}
             label="Link"
           />
