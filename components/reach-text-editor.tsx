@@ -389,8 +389,8 @@ const RichTextEditor = ({ content, noteId, note }: RichTextEditorProps) => {
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
-              variant="destructive"
-              size="icon"
+              variant="secondary"
+              size="lg"
               onClick={() => setIsToolbarOpen(!isToolbarOpen)}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >

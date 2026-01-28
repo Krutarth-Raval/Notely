@@ -80,25 +80,25 @@ export const HeroHeader = () => {
                                 </ul>
                             </div> */}
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <ModeSwitcher/>
+                <ModeSwitcher />
                 {session ? (
-                   <Button asChild size="sm">
-                   <Link href="/dashboard">
-                     <span>Go to Dashboard</span>
-                   </Link>
-                 </Button>
+                  <Button asChild size="sm">
+                    <Link href="/dashboard">
+                      <span>Go to Dashboard</span>
+                    </Link>
+                  </Button>
                 ) : (
                   <>
-                <Button asChild variant="outline" size="sm">
-                  <Link href="/login">
-                    <span>Login</span>
-                  </Link>
-                </Button>
-                <Button asChild size="sm">
-                  <Link href="/signup">
-                    <span>Sign Up</span>
-                  </Link>
-                </Button>
+                    <Button asChild variant="outline" size="sm">
+                      <Link href="/login">
+                        <span>Login</span>
+                      </Link>
+                    </Button>
+                    <Button asChild size="sm">
+                      <Link href="/signup">
+                        <span>Sign Up</span>
+                      </Link>
+                    </Button>
                   </>
                 )}
               </div>
